@@ -12,8 +12,15 @@ int main()
   }
 
   for(i=0;i<=9;i++){
-    cout << temp[i] <<"\t";
+    arr[i] = temp[i];
   }
+
+
+  for(i=0;i<=9;i++){
+    cout << arr[i] <<"\t";
+  }
+
+
   cout << endl;
 
   return 0;
