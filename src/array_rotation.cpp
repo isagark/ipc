@@ -1,3 +1,9 @@
+/*
+TIME COMPLEXITY : O(n)
+
+AUXILARY COMPLEXITY : O(d)
+
+*/
 #include<iostream>
 using namespace std;
 int main()
@@ -10,18 +16,12 @@ int main()
     j++;
     i--;
   }
-
   for(i=0;i<=9;i++){
     arr[i] = temp[i];
   }
-
-
   for(i=0;i<=9;i++){
     cout << arr[i] <<"\t";
   }
-
-
   cout << endl;
-
   return 0;
 }
