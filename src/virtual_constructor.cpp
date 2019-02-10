@@ -20,6 +20,7 @@ public:
 int main()
 {
 	A obj1;
-	A obj2 = obj1;
+	A obj2;
+	obj2 = obj1;
 	return 0;
 }
