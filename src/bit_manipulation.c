@@ -23,8 +23,14 @@ int toggle_bit(int num, int pos){
   num = num ^ (1 << pos);
   return num;
 }
+
+int swap_nibbles(int num){
+  return ((num & 0x0000ff00) << 8 | (num & 0x00fF0000) >> 8) | (num & 0xff000000) >> 24 | (num & 0x000000ff) << 24;
+}
+
 int main(){
   int num = 1;
+  int x = 0xaabbccdd;
   int count = 0;
   count = count_set(num);
   int num2 = set_bit(num,3);
@@ -40,5 +46,8 @@ int main(){
   int count4 = count_set(num4);
   printf("%d\n",num4);
   printf("%d\n",count4);
+  printf("%x\n",x);
+  x = swap_nibbles(x);
+  printf("%x\n",x);
   return 0;
 }
